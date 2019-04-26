@@ -3,6 +3,6 @@ This repository contains an educational game thats purpose is to give an insight
 
 The input is created on an arduino board and programmed in it's language, while the game is created in the Unity Framework and involves C# scripts.
 
-The premade games are: /n
-  -a dancing game (arrows on the ground) /n
+The premade games are:  
+  -a dancing game (arrows on the ground)  
   -pinball (with the use of the distance meter, buttons and a diod)
