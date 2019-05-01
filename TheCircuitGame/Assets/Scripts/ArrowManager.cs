@@ -29,7 +29,8 @@ public class ArrowManager : MonoBehaviour {
 	}
 	public void ToggleSpeed(){
 		tempSpeed = tempSpeed != 0 ? 0 : speed;
-		Invoke("ResetArrow", 1f);
+		Invoke("ResetArrow", 0.1f);
+		
 	}
 	public void ResetArrow(){
 		arrows[activeArrow].transform.position = new Vector3(arrows[activeArrow].transform.position.x, 10.5f, arrows[activeArrow].transform.position.z);
