@@ -56,7 +56,8 @@
      <Compile Include="Assets\Scripts\AroundArrowsTriggers.cs" />
      <Compile Include="Assets\Scripts\ArrowManager.cs" />
      <Compile Include="Assets\Scripts\BlackArrowTriggers.cs" />
-     <Compile Include="Assets\Scripts\UserInputManager.cs" />
+     <Compile Include="Assets\Scripts\EventManager.cs" />
+     <Compile Include="Assets\Scripts\TextManager.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Dani/Desktop/TheCircuitGame/TheCircuitGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
