@@ -568,9 +568,10 @@ GameObject:
   - component: {fileID: 708887107}
   - component: {fileID: 708887110}
   - component: {fileID: 708887109}
+  - component: {fileID: 708887111}
   m_Layer: 0
-  m_Name: shape023_style01_color04
-  m_TagString: Untagged
+  m_Name: UpBlueArrow
+  m_TagString: Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -679,6 +680,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &708887111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 708887106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f36736ae36f683042a3c6d11a415b55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accuracy: {fileID: 1030700980}
 --- !u!1 &959108500
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,9 +1002,10 @@ GameObject:
   - component: {fileID: 1305411894}
   - component: {fileID: 1305411897}
   - component: {fileID: 1305411896}
+  - component: {fileID: 1305411898}
   m_Layer: 0
-  m_Name: shape024_style01_color04
-  m_TagString: Untagged
+  m_Name: DownBlueArrow
+  m_TagString: Down
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1100,6 +1114,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1305411898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1305411893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f36736ae36f683042a3c6d11a415b55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accuracy: {fileID: 1030700980}
 --- !u!1 &1315439520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,9 +1245,10 @@ GameObject:
   - component: {fileID: 1467418392}
   - component: {fileID: 1467418395}
   - component: {fileID: 1467418394}
+  - component: {fileID: 1467418396}
   m_Layer: 0
-  m_Name: shape022_style01_color04
-  m_TagString: Untagged
+  m_Name: RightBlueArrow
+  m_TagString: Right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1330,6 +1357,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1467418396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1467418391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f36736ae36f683042a3c6d11a415b55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accuracy: {fileID: 1030700980}
 --- !u!1 &1489454288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,9 +1380,10 @@ GameObject:
   - component: {fileID: 1489454289}
   - component: {fileID: 1489454292}
   - component: {fileID: 1489454291}
+  - component: {fileID: 1489454293}
   m_Layer: 0
-  m_Name: shape021_style01_color04
-  m_TagString: Untagged
+  m_Name: LeftBlueArrow
+  m_TagString: Left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1452,6 +1492,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1489454293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1489454288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f36736ae36f683042a3c6d11a415b55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accuracy: {fileID: 1030700980}
 --- !u!1 &1752110650
 GameObject:
   m_ObjectHideFlags: 0
