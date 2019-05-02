@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\ArrowManager.cs" />
      <Compile Include="Assets\Scripts\BlackArrowTriggers.cs" />
      <Compile Include="Assets\Scripts\EventManager.cs" />
+     <Compile Include="Assets\Scripts\FadeOut.cs" />
      <Compile Include="Assets\Scripts\ParticleManager.cs" />
      <Compile Include="Assets\Scripts\TextManager.cs" />
  <Reference Include="UnityEditor.StandardEvents">

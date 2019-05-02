@@ -192,7 +192,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4412680923301870, guid: a949df03dc1703a46873986993c91105, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.9637706
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4412680923301870, guid: a949df03dc1703a46873986993c91105, type: 2}
       propertyPath: m_LocalPosition.z
@@ -220,7 +220,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1849817865607312, guid: a949df03dc1703a46873986993c91105, type: 2}
       propertyPath: m_Name
-      value: blackArrowRight
+      value: BlackArrowRight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a949df03dc1703a46873986993c91105, type: 2}
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 380536269}
   - component: {fileID: 380536268}
   m_Layer: 0
-  m_Name: style02_color08
+  m_Name: AroundArrows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -297,11 +297,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 380536266}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8050913, y: -1.0017707, z: -48.70316}
-  m_LocalScale: {x: 4.163, y: 1.154, z: 1}
+  m_LocalPosition: {x: 0.8050913, y: 0.89, z: -48.70316}
+  m_LocalScale: {x: 4.163, y: 0.84630364, z: 1}
   m_Children: []
   m_Father: {fileID: 2035260944}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &380536268
 MonoBehaviour:
@@ -812,106 +812,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1030700978}
   m_CullTransparentMesh: 0
---- !u!1 &1170490946
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1170490947}
-  - component: {fileID: 1170490950}
-  - component: {fileID: 1170490949}
-  - component: {fileID: 1170490948}
-  - component: {fileID: 1170490951}
-  m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1170490947
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1170490946}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.29, y: -0.971, z: -45.1}
-  m_LocalScale: {x: 1, y: 1, z: 0.4256206}
-  m_Children: []
-  m_Father: {fileID: 2035260944}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1170490948
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1170490946}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1170490949
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1170490946}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1170490950
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1170490946}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1170490951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1170490946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c72ddf538a410c4a9751effd512e5e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  accuracy: {fileID: 1030700980}
 --- !u!1001 &1236989719
 Prefab:
   m_ObjectHideFlags: 0
@@ -925,7 +825,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4969782523824362, guid: fe209481d0cba6b4c96e26036e210def, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.9637706
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4969782523824362, guid: fe209481d0cba6b4c96e26036e210def, type: 2}
       propertyPath: m_LocalPosition.z
@@ -953,7 +853,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1763863479211672, guid: fe209481d0cba6b4c96e26036e210def, type: 2}
       propertyPath: m_Name
-      value: blackArrowDown
+      value: BlackArrowDown
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe209481d0cba6b4c96e26036e210def, type: 2}
@@ -971,7 +871,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4314629119187204, guid: 78e70c5d58a8d3d42a24b972e6945d4f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.9637706
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4314629119187204, guid: 78e70c5d58a8d3d42a24b972e6945d4f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -999,7 +899,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1361530438865306, guid: 78e70c5d58a8d3d42a24b972e6945d4f, type: 2}
       propertyPath: m_Name
-      value: blackArrowUp
+      value: BlackArrowUp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78e70c5d58a8d3d42a24b972e6945d4f, type: 2}
@@ -1723,7 +1623,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4773570087622198, guid: aa67171d95abb0747bafaa63917652fb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.9637706
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4773570087622198, guid: aa67171d95abb0747bafaa63917652fb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1751,7 +1651,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1829373642398164, guid: aa67171d95abb0747bafaa63917652fb, type: 2}
       propertyPath: m_Name
-      value: blackArrowLeft
+      value: BlackArrowLeft
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa67171d95abb0747bafaa63917652fb, type: 2}
@@ -1785,7 +1685,6 @@ Transform:
   - {fileID: 694466901}
   - {fileID: 1978282838}
   - {fileID: 384589342}
-  - {fileID: 1170490947}
   - {fileID: 380536267}
   m_Father: {fileID: 0}
   m_RootOrder: 4

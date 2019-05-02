@@ -7,11 +7,12 @@ public class TextManager : MonoBehaviour {
 	void Start () {
 		accuracy.gameObject.SetActive(false);
 		EventManager.OnClick += SetAccuracy;
+		AroundArrowsTriggers.OnNoClick += SetAccuracy;
 	}
 	
 	void SetAccuracy () {
 		if(!Input.GetButton(gameObject.tag))
-			accuracy.text = "miss";
+			accuracy.text = "Miss";
 		accuracy.gameObject.SetActive(true);
 	}
 }
