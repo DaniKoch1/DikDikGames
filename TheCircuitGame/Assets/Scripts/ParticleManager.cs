@@ -9,5 +9,6 @@ public class ParticleManager : MonoBehaviour {
 	}
 	public void DisapearArrowWithParticle(){
 		Instantiate(particle, gameObject.transform);
+		gameObject.SetActive(false);
 	}
 }

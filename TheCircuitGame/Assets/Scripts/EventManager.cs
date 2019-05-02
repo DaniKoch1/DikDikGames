@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class EventManager : MonoBehaviour {
@@ -7,9 +9,11 @@ public class EventManager : MonoBehaviour {
 	public delegate void ClickAction();
 	public static event ClickAction OnClick;
 	void Start() {
-		accuracy.gameObject.SetActive(false);
 		OnClick += SetAccuracy;
 		AroundArrowsTriggers.OnNoClick += SetAccuracy;
+	}
+	private void OnEnable() {
+		accuracy.gameObject.SetActive(false);
 	}
 	void Update () {
 		if(Input.anyKeyDown){
@@ -19,7 +23,8 @@ public class EventManager : MonoBehaviour {
 				OnClick();
 		}
 	}
-	void SetAccuracy () {
+	private void SetAccuracy () {
+		
 		accuracy.gameObject.SetActive(true);
 	}
 }
