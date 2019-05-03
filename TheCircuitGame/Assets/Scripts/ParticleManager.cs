@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ParticleManager : MonoBehaviour {
-	public GameObject particle;
-	 void Start() {
-		EventManager.OnClick += DisapearArrowWithParticle;
-	}
-	public void DisapearArrowWithParticle(){
-		Instantiate(particle, gameObject.transform);
-		gameObject.SetActive(false);
-	}
+	//public static GameObject particle;
+	//  void Start() {
+	// 	EventManagerNew.OnClick += DisapearArrowWithParticle;
+	// }
+	// public static void DisapearArrowWithParticle(GameObject arrow, GameObject particle){
+	// 	Instantiate(particle, arrow.transform);
+	// 	arrow.SetActive(false);
+	// }
 }
