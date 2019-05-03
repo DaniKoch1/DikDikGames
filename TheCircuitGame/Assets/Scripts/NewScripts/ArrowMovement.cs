@@ -16,15 +16,21 @@ public class ArrowMovement : MonoBehaviour {
 		if(Input.anyKeyDown){
 			//if(!Input.GetButton(dir.ToString()))
 				//accuracy.text = "Miss";
-			StartCoroutine("DisapearArrowWithParticle");
+			//StartCoroutine("DisapearArrowWithParticle");
+			DisapearArrowWithParticle();
 		}
 	}
 	private void MoveArrow(){
 		transform.Translate(Vector2.down * speed);
 	}
-	public IEnumerator DisapearArrowWithParticle(){
+	// public IEnumerator DisapearArrowWithParticle(){
+	// 	Instantiate(particle, transform);
+	// 	yield return new WaitForSeconds(0.5f);
+	// 	gameObject.SetActive(false);
+	// }
+	public void DisapearArrowWithParticle(){
 		Instantiate(particle, transform);
-		yield return new WaitForSeconds(0.5f);
-		gameObject.SetActive(false);
+		StartCoroutine(FadeOut.Fade(gameObject));
+		//gameObject.SetActive(false);
 	}
 }

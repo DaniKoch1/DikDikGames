@@ -5,18 +5,18 @@ public class Lighting : MonoBehaviour {
 
 public float lighting = 1;
 public Light lightPower;
-public bool  flashFlg = false;
+public bool flashFlg = false;
 public float flashTimer = 0.3f;
 
-private bool  lightKeepFlg = false;
+private bool lightKeepFlg = false;
 public float revOnTime = 0;
 public float keepOnTime = 0;
 public float keepTime = 0;
 
-public bool  flashingFlg = false;
+public bool flashingFlg = false;
 public float minLight = 0;
 public float maxLight = 1;
-private bool  lightOffFlg = false;
+private bool lightOffFlg = false;
 public float flashingOff = 0;
 public float flashingOffPower = 0;
 public float flashingOffIntensity = 1;
@@ -49,8 +49,6 @@ void Update (){
 		if( keepTime <= 0 )lightKeepFlg = false;
 	}
 }
-
-	
 	IEnumerator flash (){
 		if( flashFlg ){
 			lightPower.enabled = false;
