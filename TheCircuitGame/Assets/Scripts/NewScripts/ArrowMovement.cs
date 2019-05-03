@@ -24,7 +24,7 @@ public class ArrowMovement : MonoBehaviour {
 	}
 	public IEnumerator DisapearArrowWithParticle(){
 		Instantiate(particle, transform);
-		yield return new WaitForSeconds(0.1f);
+		yield return new WaitForSeconds(0.5f);
 		gameObject.SetActive(false);
 	}
 }
