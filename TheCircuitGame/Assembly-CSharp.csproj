@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\BlackArrowTriggers.cs" />
      <Compile Include="Assets\Scripts\FadeOut.cs" />
      <Compile Include="Assets\Scripts\Lighting.cs" />
+     <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\TextSingleton.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Dani/Desktop/TheCircuitGame/TheCircuitGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
