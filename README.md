@@ -9,7 +9,8 @@ The premade games are:
   
 Big thanks for the assets from the Unity Asset Store:  
   -KY Magic Effects Free: https://assetstore.unity.com/packages/vfx/particles/spells/ky-magic-effects-free-21927  
-  -simple icon pastel tone: https://assetstore.unity.com/packages/2d/gui/icons/simple-icon-pastel-tone-107568
+  -simple icon pastel tone: https://assetstore.unity.com/packages/2d/gui/icons/simple-icon-pastel-tone-107568  
+  -Sound FX - Retro Pack: https://assetstore.unity.com/packages/audio/sound-fx/sound-fx-retro-pack-121743
 
 And for tutorials:  
 -How to fade out or fade in a game object with coroutine in Unity game?: https://www.youtube.com/watch?v=oNz4I0RfsEg
