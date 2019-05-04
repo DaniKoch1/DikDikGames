@@ -1,26 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
-public class ArrowManager : MonoBehaviour {
+public class ArrowManager : MonoBehaviour{
 
-	public GameObject[] arrows;
-	public float speed = 0.1f;
-	private int activeArrow;
-	void Start () {
-		foreach(GameObject arrow in arrows)
-			arrow.SetActive(false);
-		ChooseArrow();
+    public GameObject[] arrows;
+    public AudioClip tone;
+    void Start() {
+        foreach(GameObject arrow in arrows)
+            arrow.SetActive(false);
+        StartCoroutine("StartNewArrow");
+        ArrowMovement.OnClick += PlaySound;
+    }
+    private IEnumerator StartNewArrow(){
+        GameObject chosenArrow;
+        while(true){
+            chosenArrow = ChooseArrow();
+            if(!chosenArrow.activeInHierarchy){
+                chosenArrow.SetActive(true);
+                //Debug.Log("Chosen New: "+chosenArrow.name);
+                yield return new WaitForSeconds(2);
+            }
+        }
+    }
+    private GameObject ChooseArrow(){
+        return arrows[Random.Range(0,4)];
 	}
-	
-	void Update () {
-		MoveArrow(arrows[activeArrow], speed);
-	}
-	private void ChooseArrow(){
-		activeArrow = Random.Range(0,4);
-		arrows[activeArrow].SetActive(true);
-	}
-	public void MoveArrow(GameObject arrow, float speed){
-		arrow.transform.Translate(Vector2.down * speed);
-	}
+    private void PlaySound(){
+        Debug.Log("Playing tone");
+        GetComponent<AudioSource>().PlayOneShot(tone, 1f);
+    }
 }

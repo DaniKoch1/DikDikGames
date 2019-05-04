@@ -3,13 +3,27 @@ using UnityEngine.UI;
 
 public class AroundArrowsTriggers : MonoBehaviour {
 
-	public Text accuracy;
+	private Collider2D arrow;
+	//private string accuracy;
+	public delegate void ClickAction();
+	public static event ClickAction OnNoClick;
+	private void Start() {
+		OnNoClick += StartFading;
+	}
 	private void OnTriggerEnter2D(Collider2D other) {
-		accuracy.text="Good";
+		TextSingleton.Instance.accuracyText="Good";
+		ScoreManager.Instance.score=10;
 		//Debug.Log("Good");
 	}
 	private void OnTriggerExit2D(Collider2D other) {
-		accuracy.text="Miss";
+		TextSingleton.Instance.accuracyText="Miss";
+		ScoreManager.Instance.score=0;
 		//Debug.Log("Miss");
+		arrow=other;
+		if(OnNoClick != null)
+			OnNoClick();
+	}
+	private void StartFading(){
+		StartCoroutine(FadeOut.Fade(arrow.gameObject));
 	}
 }
