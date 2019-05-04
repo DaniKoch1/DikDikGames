@@ -5,10 +5,12 @@ using System.Collections.Generic;
 public class ArrowManager : MonoBehaviour{
 
     public GameObject[] arrows;
+    public AudioClip tone;
     void Start() {
         foreach(GameObject arrow in arrows)
             arrow.SetActive(false);
         StartCoroutine("StartNewArrow");
+        ArrowMovement.OnClick += PlaySound;
     }
     private IEnumerator StartNewArrow(){
         GameObject chosenArrow;
@@ -24,4 +26,8 @@ public class ArrowManager : MonoBehaviour{
     private GameObject ChooseArrow(){
         return arrows[Random.Range(0,4)];
 	}
+    private void PlaySound(){
+        Debug.Log("Playing tone");
+        GetComponent<AudioSource>().PlayOneShot(tone, 1f);
+    }
 }

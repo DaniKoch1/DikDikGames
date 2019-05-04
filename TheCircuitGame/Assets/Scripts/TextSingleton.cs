@@ -19,6 +19,7 @@ public class TextSingleton : MonoBehaviour {
 		 }
  	}
 	 void Start() {
+		 accuracyText = "Miss";
 		 accuracy.gameObject.SetActive(false);
 		 AroundArrowsTriggers.OnNoClick += SetAccuracy;
 		 AroundArrowsTriggers.OnNoClick += ActivateText;

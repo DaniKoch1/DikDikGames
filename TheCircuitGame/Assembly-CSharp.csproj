@@ -53,13 +53,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\KY_effects\Script\Lighting.cs" />
      <Compile Include="Assets\Scripts\AroundArrowsTriggers.cs" />
      <Compile Include="Assets\Scripts\ArrowDirectionEnum.cs" />
      <Compile Include="Assets\Scripts\ArrowManager.cs" />
      <Compile Include="Assets\Scripts\ArrowMovement.cs" />
      <Compile Include="Assets\Scripts\BlackArrowTriggers.cs" />
      <Compile Include="Assets\Scripts\FadeOut.cs" />
+     <Compile Include="Assets\Scripts\Lighting.cs" />
      <Compile Include="Assets\Scripts\TextSingleton.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Dani/Desktop/TheCircuitGame/TheCircuitGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
