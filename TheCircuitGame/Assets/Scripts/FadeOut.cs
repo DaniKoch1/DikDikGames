@@ -5,7 +5,11 @@ using UnityEngine;
 public class FadeOut : MonoBehaviour {
 
 	public static IEnumerator Fade(GameObject arrow){
-		Renderer render = arrow.GetComponent<SpriteRenderer>();
+		Renderer render;
+		if( arrow.GetComponent<SpriteRenderer>() != null) //totally against open closed principle!
+			render = arrow.GetComponent<SpriteRenderer>();
+		else
+			render = arrow.GetComponent<MeshRenderer>();
 		Color c = render.material.color;
 		for(float f = 1; f >= -0.05f; f -= 0.05f){
 			//c = render.material.color;
