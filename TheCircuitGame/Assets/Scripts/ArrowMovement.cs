@@ -9,7 +9,6 @@ public class ArrowMovement : MonoBehaviour {
 	public static event AroundArrowsTriggers.ClickAction OnClick;
 	void OnEnable() {
 		transform.position = new Vector2(transform.position.x, 6);
-		speed = 0.1f;
 	}
 	private void Start() {
 		OnClick += DisapearArrowWithParticle;
@@ -20,7 +19,6 @@ public class ArrowMovement : MonoBehaviour {
 			if(!Input.GetButton(dir.ToString()))
 				TextSingleton.Instance.accuracyText = "Miss";
 			OnClick();
-			//DisapearArrowWithParticle();
 		}
 	}
 	private void MoveArrow(){
