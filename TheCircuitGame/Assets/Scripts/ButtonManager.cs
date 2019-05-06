@@ -25,7 +25,7 @@ public class ButtonManager : MonoBehaviour {
 		if(missCounter == 10)
 		{
 			SceneManager.LoadScene("GameOver");
-        	PlayerPersistance.ResetData();
+        	//PlayerPersistance.ResetData();
 		}
 	}
 }
