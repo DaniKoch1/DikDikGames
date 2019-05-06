@@ -16,7 +16,7 @@ public class ArrowManager : MonoBehaviour{
         foreach(GameObject arrow in arrows)
             arrow.SetActive(false);
         StartCoroutine("StartNewArrow");
-        ArrowMovement.OnClick += PlaySound;
+        ConnectWithArduino.OnClick += PlaySound;
     }
     void OnEnable() {
         PlayerPersistance.LoadData();
@@ -33,6 +33,7 @@ public class ArrowManager : MonoBehaviour{
             chosenArrow = ChooseArrow();
             if(!chosenArrow.activeInHierarchy){
                 chosenArrow.SetActive(true);
+                ConnectWithArduino.activeArrow = chosenArrow;
                 if(countArrows%3==2 && waitingTime>=0.05f)
                     waitingTime-=0.05f;
                 yield return new WaitForSeconds(waitingTime);

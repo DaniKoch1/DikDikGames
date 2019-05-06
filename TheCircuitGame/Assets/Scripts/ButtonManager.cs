@@ -33,7 +33,7 @@ public class ButtonManager : MonoBehaviour {
 	}
 	public static void GameOver(){
 		missCounter++;
-		if(missCounter == 10)
+		if(missCounter == 3)
 		{
 			SceneManager.LoadScene("GameOver");
         	//PlayerPersistance.ResetData();

@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class FinalScore : MonoBehaviour {
 	void Start () {
-		gameObject.GetComponent<TextMesh>().text = "Score: " + ScoreManager.Instance.totalScore.ToString();
+		//gameObject.GetComponent<TextMesh>().text = "Score: " + ScoreManager.Instance.totalScore.ToString();
 	}
 }

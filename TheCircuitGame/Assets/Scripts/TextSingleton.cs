@@ -24,14 +24,14 @@ public class TextSingleton : MonoBehaviour {
 		 AroundArrowsTriggers.OnNoClick += SetAccuracy;
 		 AroundArrowsTriggers.OnNoClick += ActivateText;
 		 
-		 ArrowMovement.OnClick += SetAccuracy;
-		 ArrowMovement.OnClick += ActivateText;
+		 ConnectWithArduino.OnClick += SetAccuracy;
+		 ConnectWithArduino.OnClick += ActivateText;
 	}
 	private void ActivateText(){
 		accuracy.gameObject.SetActive(true);
 		StartCoroutine(FadeOut.Fade(accuracy.gameObject, 0.0001f));
-		if(accuracyText.Equals("Miss"))
-			ButtonManager.GameOver();
+		//if(accuracyText.Equals("Miss"))
+			//ButtonManager.GameOver();
 	}
 	private void SetAccuracy(){
 		if(!accuracy.activeInHierarchy)

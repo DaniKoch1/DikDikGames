@@ -3,26 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ArrowMovement : MonoBehaviour {
-	public ArrowDirection dir;
+	public ArrowDirection dir{get; private set;}
 	public GameObject particle; 
-	//public float speed; //get from GameManager: with points and number of catches (static there), set in OnEnable
-	public static event AroundArrowsTriggers.ClickAction OnClick;
 	void OnEnable() {
 		transform.position = new Vector2(transform.position.x, 6);
 	}
 	private void Start() {
-		OnClick += DisapearArrowWithParticle;
+		ConnectWithArduino.OnClick += DisapearArrowWithParticle;
 	}
 	void Update () {
 		MoveArrow();
-		if(Input.anyKeyDown){
-			if(!Input.GetButton(dir.ToString())){
-				TextSingleton.Instance.accuracyText = "Miss";
-				ScoreManager.Instance.score = 0;
-			}
-			if(Input.GetButton("Left") || Input.GetButton("Right") || Input.GetButton("Up") || Input.GetButton("Down"))
-				OnClick();
-		}
+		// if(Input.anyKeyDown){
+		// 	if(!Input.GetButton(dir.ToString())){
+		// 		TextSingleton.Instance.accuracyText = "Miss";
+		// 		ScoreManager.Instance.score = 0;
+		// 	}
+		// 	if(Input.GetButton("Left") || Input.GetButton("Right") || Input.GetButton("Up") || Input.GetButton("Down"))
+		// 		OnClick();
+		// }
 	}
 	private void MoveArrow(){
 		transform.Translate(Vector2.down * ArrowManager.speedOfArrows);
@@ -33,4 +31,11 @@ public class ArrowMovement : MonoBehaviour {
 			StartCoroutine(FadeOut.Fade(gameObject, 0.0001f));
 		}
 	}
+	// public void ListenToInput(ArrowDirection button){
+	// 	if(button != dir){
+	// 		TextSingleton.Instance.accuracyText = "Miss";
+	// 		ScoreManager.Instance.score = 0;
+	// 	}
+	// 	OnClick();
+	// }
 }
