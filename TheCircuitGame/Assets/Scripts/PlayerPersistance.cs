@@ -29,10 +29,7 @@ public class PlayerPersistance : MonoBehaviour {
     }
     public static void ResetData(){
         PlayerPrefs.SetInt("score", 0);
-        if(ScoreManager.Instance.highscore == null)
-            PlayerPrefs.SetInt("highscore", 0);
-        else
-            PlayerPrefs.SetInt("highscore", ScoreManager.Instance.highscore);
+        PlayerPrefs.SetInt("highscore", ScoreManager.Instance.highscore);
         PlayerPrefs.SetFloat("speedOfArrows", 0.1f);
         PlayerPrefs.SetFloat("waitingTime", 2);
     }
