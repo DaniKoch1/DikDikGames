@@ -7,16 +7,22 @@ public class ArrowManager : MonoBehaviour{
     public GameObject[] arrows;
     public AudioClip tone;
     private int countArrows;
-    private float waitingTime;
+    public static float waitingTime;
     public static float speedOfArrows;
     void Start() {
         countArrows=0;
-        speedOfArrows=0.1f;
-        waitingTime=2;
+        //speedOfArrows=0.1f;
+        //waitingTime=2;
         foreach(GameObject arrow in arrows)
             arrow.SetActive(false);
         StartCoroutine("StartNewArrow");
         ArrowMovement.OnClick += PlaySound;
+    }
+    void OnEnable() {
+        PlayerPersistance.LoadData();
+    }
+    void OnDisable() {
+        PlayerPersistance.SaveData();
     }
     private IEnumerator StartNewArrow(){
         GameObject chosenArrow;

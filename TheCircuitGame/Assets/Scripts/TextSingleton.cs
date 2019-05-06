@@ -29,7 +29,9 @@ public class TextSingleton : MonoBehaviour {
 	}
 	private void ActivateText(){
 		accuracy.gameObject.SetActive(true);
-		StartCoroutine(FadeOut.Fade(accuracy.gameObject));
+		StartCoroutine(FadeOut.Fade(accuracy.gameObject, 0.0001f));
+		if(accuracyText.Equals("Miss"))
+			ButtonManager.GameOver();
 	}
 	private void SetAccuracy(){
 		if(!accuracy.activeInHierarchy)

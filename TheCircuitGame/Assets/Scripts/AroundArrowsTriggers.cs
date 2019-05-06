@@ -20,6 +20,6 @@ public class AroundArrowsTriggers : MonoBehaviour {
 			OnNoClick();
 	}
 	private void StartFading(){
-		StartCoroutine(FadeOut.Fade(arrow.gameObject));
+		StartCoroutine(FadeOut.Fade(arrow.gameObject, 0.00005f));
 	}
 }

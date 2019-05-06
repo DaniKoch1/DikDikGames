@@ -16,8 +16,10 @@ public class ArrowMovement : MonoBehaviour {
 	void Update () {
 		MoveArrow();
 		if(Input.anyKeyDown){
-			if(!Input.GetButton(dir.ToString()))
+			if(!Input.GetButton(dir.ToString())){
 				TextSingleton.Instance.accuracyText = "Miss";
+				ScoreManager.Instance.score = 0;
+			}
 			if(Input.GetButton("Left") || Input.GetButton("Right") || Input.GetButton("Up") || Input.GetButton("Down"))
 				OnClick();
 		}
@@ -28,7 +30,7 @@ public class ArrowMovement : MonoBehaviour {
 	public void DisapearArrowWithParticle(){
 		if(gameObject.activeSelf){
 			Instantiate(particle, transform);
-			StartCoroutine(FadeOut.Fade(gameObject));
+			StartCoroutine(FadeOut.Fade(gameObject, 0.0001f));
 		}
 	}
 }
