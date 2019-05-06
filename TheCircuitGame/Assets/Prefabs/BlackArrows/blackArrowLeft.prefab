@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212505415311868348}
   - component: {fileID: 61727748824892074}
   - component: {fileID: 114781258439878344}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: blackArrowLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829373642398164}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: 0.5, z: 1}
+  m_LocalPosition: {x: -3, y: -2, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49aa64499705dd44ad21d87ec143927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accuracy: {fileID: 0}
 --- !u!212 &212505415311868348
 SpriteRenderer:
   m_ObjectHideFlags: 1

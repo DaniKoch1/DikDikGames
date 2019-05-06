@@ -22,11 +22,8 @@ GameObject:
   - component: {fileID: 212079371880773824}
   - component: {fileID: 61348557003063584}
   - component: {fileID: 50936076461261736}
-  - component: {fileID: 114180109563361528}
-  - component: {fileID: 114339454470885460}
-  - component: {fileID: 114090076209242550}
   - component: {fileID: 114475511906799060}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UpBlueArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1697593047160758}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 10.5, z: 1}
+  m_LocalPosition: {x: 1, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -89,43 +86,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 2, y: 0.3}
   m_EdgeRadius: 0
---- !u!114 &114090076209242550
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1697593047160758}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3b801fe0b6391648b4f5850772ac7ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  accuracy: {fileID: 0}
---- !u!114 &114180109563361528
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1697593047160758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f36736ae36f683042a3c6d11a415b55b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114339454470885460
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1697593047160758}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 759cdc5b2390735489565f9140179eee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particle: {fileID: 1037157629734504, guid: b1bd97139312bdf42b04556bc39c0d32, type: 2}
 --- !u!114 &114475511906799060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,7 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6136809b12d79fe479f18a68afc1a1ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  dir: 2
+  particle: {fileID: 100002, guid: 75369bb81385f4904842bf20a51c14a2, type: 2}
 --- !u!212 &212079371880773824
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -172,7 +135,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7257bc31ad589ae4ebae4d155240e307, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

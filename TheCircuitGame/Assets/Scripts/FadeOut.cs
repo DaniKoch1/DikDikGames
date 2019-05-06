@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FadeOut : MonoBehaviour {
 
-	public static IEnumerator Fade(GameObject arrow){
+	public static IEnumerator Fade(GameObject arrow, float time){
 		Renderer render;
 		if( arrow.GetComponent<SpriteRenderer>() != null) //totally against open closed principle!
 			render = arrow.GetComponent<SpriteRenderer>();
@@ -15,7 +15,7 @@ public class FadeOut : MonoBehaviour {
 			//c = render.material.color;
 			c.a = f;
 			render.material.color = c;
-			yield return new WaitForSeconds(0.0001f);
+			yield return new WaitForSeconds(time);
 		}
 		c.a=1;
 		render.material.color = c;
