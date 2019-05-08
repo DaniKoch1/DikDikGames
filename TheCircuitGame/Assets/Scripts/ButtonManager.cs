@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour {
 
-	private static int missCounter;
 	private float speedOfArrows;
-	public AudioSource music;
+	private AudioSource music;
+	void Start() {
+		music = LoadAudio.Instance.audioSource;
+	}
 	public void StartGame(){
 		SceneManager.LoadScene("Dance");
 	}
@@ -31,12 +33,5 @@ public class ButtonManager : MonoBehaviour {
         	Application.Quit ();
 		#endif
 	}
-	public static void GameOver(){
-		missCounter++;
-		if(missCounter == 3)
-		{
-			SceneManager.LoadScene("GameOver");
-        	PlayerPersistance.ResetData();
-		}
-	}
+	
 }

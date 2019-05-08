@@ -25,8 +25,11 @@ public class ScoreManager : MonoBehaviour {
 	void Start() {
 		 //displayedScore=GameObject.Find("Score");
 		 //displayedHighscore=GameObject.Find("Highscore");
-		 ConnectWithArduino.OnClick += SetScore;
-		 displayedHighscore.GetComponent<TextMesh>().text = "Highscore: " + highscore.ToString();
+		 //ConnectWithArduino.OnClick += SetScore;
+		 ArrowMovement.OnClick += SetScore;
+		 GameOverManager.OnGameOver += ChangePositions;
+		 //GameOverManager.OnGameOver += ActivateNewHighScore;
+		 UpdateHighScore(true);
 		 newHighscore.SetActive(false);
 	 }
 
@@ -34,14 +37,36 @@ public class ScoreManager : MonoBehaviour {
 		//displayedScore=GameObject.Find("Score");
 		totalScore+=score;
 		gameObject.GetComponent<TextMesh>().text = "Score: " + totalScore.ToString();
-		if(totalScore > highscore)
+		if(totalScore > highscore) //why is it 0 after the game has ended???
 		{
 			if(firstHighscore){
-				newHighscore.SetActive(true);
-				StartCoroutine(FadeOut.Fade(newHighscore, 0.001f));
-				firstHighscore = false;
+				ActivateNewHighScore(true);
+				StartCoroutine(FadeOut.Fade(newHighscore, 0.01f));
+				GameOverManager.OnGameOver += ActivateNewHighScore;
+				GameOverManager.OnGameOver += UpdateHighScore;
 			}
 			highscore = totalScore;
+		}
+	}
+	public void ResetScore(){
+		totalScore = score;
+		SetScore();
+	}
+	public void ActivateNewHighScore(bool over){
+		newHighscore.SetActive(over);
+		firstHighscore = !over;	
+	}
+	public void UpdateHighScore(bool over){
+		 displayedHighscore.GetComponent<TextMesh>().text = "Highscore: " + highscore.ToString();
+	}
+	public void ChangePositions(bool over){
+		if(over){
+			gameObject.transform.position = new Vector3(0,3.8f,1);
+			displayedHighscore.transform.position = new Vector3(0,3,1);
+		}
+		else{
+			gameObject.transform.position = new Vector3(-7.5f,4.5f,1);
+			displayedHighscore.transform.position = new Vector3(-7.5f,4,1);
 		}
 	}
 }

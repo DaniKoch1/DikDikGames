@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class LoadAudio : MonoBehaviour {
 
-	AudioClip chosenAudio;
+	public AudioSource audioSource {get; private set;}
+	private AudioClip chosenAudio;
 	private static LoadAudio instance = null;
  	public static LoadAudio Instance {
  	    get { return instance; }
@@ -18,10 +19,13 @@ public class LoadAudio : MonoBehaviour {
 		 }
 		 DontDestroyOnLoad(this);
  	}
+	 void Start() {
+		audioSource = gameObject.GetComponent<AudioSource>();
+	 }
 	public void StartAudio () {
 		if(chosenAudio == null)
 			ChooseEarth();
-		gameObject.GetComponent<AudioSource>().PlayOneShot(chosenAudio);
+		audioSource.PlayOneShot(chosenAudio);
 	}
 	public void ChooseLena(){
 		Debug.Log("chosen");

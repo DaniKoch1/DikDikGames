@@ -10,16 +10,15 @@ public class PlayerPersistance : MonoBehaviour {
         float speedOfArrows = PlayerPrefs.GetFloat("speedOfArrows");
         float waitingTime = PlayerPrefs.GetFloat("waitingTime");
 
-        if(score == null)
-            ResetData();
-        else{
+        // if(score == null)
+        //     ResetData();
+        // else{
             ScoreManager.Instance.score = score;
-            //ScoreManager.Instance.InitializeGameobjects();
-            ScoreManager.Instance.SetScore();
+            ScoreManager.Instance.ResetScore();
             ScoreManager.Instance.highscore = highscore;
             ArrowManager.speedOfArrows = speedOfArrows;
             ArrowManager.waitingTime = waitingTime;
-        }
+        //}
     }
     public static void SaveData(){
         PlayerPrefs.SetInt("score", ScoreManager.Instance.totalScore);
