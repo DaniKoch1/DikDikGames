@@ -28,7 +28,6 @@ public class LoadAudio : MonoBehaviour {
 		audioSource.PlayOneShot(chosenAudio);
 	}
 	public void ChooseLena(){
-		Debug.Log("chosen");
 		chosenAudio = Resources.Load<AudioClip>("Lena-BetterNews");
 	}
 	public void ChooseAristocats(){

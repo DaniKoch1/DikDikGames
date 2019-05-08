@@ -12,7 +12,6 @@ public class GameOverManager : MonoBehaviour {
 	void Start () {
 		OnGameOver += ActivateRestartButton;
 		ActivateRestartButton(false);
-		
 	}
 	public static void GameOver(){
 		missCounter++;

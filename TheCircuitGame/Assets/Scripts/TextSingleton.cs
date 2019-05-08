@@ -5,7 +5,7 @@ using UnityEngine;
 public class TextSingleton : MonoBehaviour {
 
 	//public GameObject accuracy;
-	public string accuracyText {get; set;}
+	public string accuracyText;
 	private static TextSingleton instance = null;
  	public static TextSingleton Instance {
  	    get { return instance; }
@@ -18,6 +18,9 @@ public class TextSingleton : MonoBehaviour {
  	       instance = this;
 		}
  	}
+	//  void OnEnable() {
+	// 	 accuracyText = "Miss";
+	//  }
 	 void Start() {
 		 accuracyText = "Miss";
 		 gameObject.SetActive(false);
@@ -33,7 +36,8 @@ public class TextSingleton : MonoBehaviour {
 		gameObject.SetActive(true);
 		StartCoroutine(FadeOut.Fade(gameObject, 0.0001f));
 		if(accuracyText.Equals("Miss")) {
-			GameOverManager.GameOver();}
+			GameOverManager.GameOver();
+		}
 	}
 	private void SetAccuracy(){
 		if(!gameObject.activeInHierarchy)

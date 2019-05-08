@@ -20,5 +20,7 @@ public class FadeOut : MonoBehaviour {
 		c.a=1;
 		render.material.color = c;
 		arrow.SetActive(false);
+		TextSingleton.Instance.accuracyText="Miss";
+		ScoreManager.Instance.score=0;
 	}
 }

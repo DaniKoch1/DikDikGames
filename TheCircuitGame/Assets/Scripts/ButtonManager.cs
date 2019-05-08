@@ -8,6 +8,7 @@ public class ButtonManager : MonoBehaviour {
 
 	private float speedOfArrows;
 	private AudioSource music;
+	public static event GameOverManager.NewGameOver OnPause;
 	void Start() {
 		music = LoadAudio.Instance.audioSource;
 	}
@@ -17,13 +18,15 @@ public class ButtonManager : MonoBehaviour {
 	public void PauseGame(){
 		Time.timeScale = Time.timeScale == 1.0f ? 0.0f : 1.0f;
 		if(ArrowManager.speedOfArrows == 0){
-			music.Play(0);
 			ArrowManager.speedOfArrows = speedOfArrows;
+			OnPause(false);
+			music.UnPause();
 		}
 		else{
 			music.Pause();
 			speedOfArrows = ArrowManager.speedOfArrows;
 			ArrowManager.speedOfArrows = 0;
+			OnPause(true);
 		}
 	}
 	public void QuitGame(){

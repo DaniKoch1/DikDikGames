@@ -25,23 +25,24 @@ public class ScoreManager : MonoBehaviour {
 	void Start() {
 		 //displayedScore=GameObject.Find("Score");
 		 //displayedHighscore=GameObject.Find("Highscore");
-		 //ConnectWithArduino.OnClick += SetScore;
+		//  ConnectWithArduino.OnClick += SetScore;
 		 ArrowMovement.OnClick += SetScore;
 		 GameOverManager.OnGameOver += ChangePositions;
 		 //GameOverManager.OnGameOver += ActivateNewHighScore;
 		 UpdateHighScore(true);
 		 newHighscore.SetActive(false);
+		 Debug.Log("Start "+firstHighscore);
 	 }
 
 	public void SetScore(){
-		//displayedScore=GameObject.Find("Score");
 		totalScore+=score;
 		gameObject.GetComponent<TextMesh>().text = "Score: " + totalScore.ToString();
-		if(totalScore > highscore) //why is it 0 after the game has ended???
+		if(totalScore > highscore)
 		{
+			Debug.Log("New highscore happened "+firstHighscore+totalScore+">"+highscore);
 			if(firstHighscore){
 				ActivateNewHighScore(true);
-				StartCoroutine(FadeOut.Fade(newHighscore, 0.01f));
+				StartCoroutine(FadeOut.Fade(newHighscore, 0.001f));
 				GameOverManager.OnGameOver += ActivateNewHighScore;
 				GameOverManager.OnGameOver += UpdateHighScore;
 			}
@@ -49,12 +50,15 @@ public class ScoreManager : MonoBehaviour {
 		}
 	}
 	public void ResetScore(){
-		totalScore = score;
+		totalScore = 0;
+		score = 0;
 		SetScore();
 	}
 	public void ActivateNewHighScore(bool over){
+		Debug.Log("New highscore is activated "+over);
 		newHighscore.SetActive(over);
 		firstHighscore = !over;	
+		Debug.Log("Now new highscore is "+firstHighscore);
 	}
 	public void UpdateHighScore(bool over){
 		 displayedHighscore.GetComponent<TextMesh>().text = "Highscore: " + highscore.ToString();
