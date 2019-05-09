@@ -14,3 +14,13 @@ Big thanks for the assets from the Unity Asset Store:
 And for tutorials:  
 -How to fade out or fade in a game object with coroutine in Unity game?: https://www.youtube.com/watch?v=oNz4I0RfsEg  
 -Connection Arduino with Unity: https://www.youtube.com/watch?v=iWPU9NSC-34
+
+Used audio:  
+-https://www.youtube.com/watch?v=pvuN_WvF1to  
+-https://www.youtube.com/watch?v=FrSoOfMNwrI  
+-https://www.youtube.com/watch?v=VVco76paClw  
+
+Used images:  
+-https://www.gotceleb.com/lena-meyer-landrut-stardust-booklet-2012-10-18.html/lena-meyer-landrut-stardust-booklet-03  
+-https://www.billboard.com/files/media/05-lil-dicky-earth-MV-2019-billboard-1548.jpg  
+-https://fineartamerica.com/featured/life-is-dance-in-the-rain-adrian-borda.html
