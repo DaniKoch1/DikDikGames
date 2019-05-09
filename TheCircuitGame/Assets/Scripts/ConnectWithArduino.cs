@@ -45,11 +45,11 @@ public class ConnectWithArduino : MonoBehaviour {
 	// }
 	// }
 	// private void CheckInput(ArrowDirection dir){
-	// 	// if(dir != activeArrow.GetComponent<ArrowDirection>()){
-	// 	// 	Debug.Log("The buttons don't match");
-	// 	// 	TextSingleton.Instance.accuracyText = "Miss";
-	// 	// 	ScoreManager.Instance.score = 0;
-	// 	// }
+	// 	if(dir != activeArrow.GetComponent<ArrowDirection>()){
+	// 		Debug.Log("The buttons don't match");
+	// 		TextSingleton.Instance.accuracyText = "Miss";
+	// 		ScoreManager.Instance.score = 0;
+	// 	}
 	// 	Debug.Log("OnClick will happen now");
 	// 	OnClick();
 	// }

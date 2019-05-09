@@ -2,11 +2,6 @@ const int BUTTON1 = 4;
 const int BUTTON2 = 5;
 const int BUTTON3 = 6;
 const int BUTTON4 = 7;
-int buttonState1 = 0;
-int buttonState2 = 0;
-int buttonState3 = 0;
-int buttonState4 = 0;
-int lastButtonState  = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -18,7 +13,6 @@ void setup() {
 }
 
 void loop() {
-  buttonState1 = digitalRead(BUTTON1);
   if (digitalRead(BUTTON1) == HIGH) {
     Serial.write(1);
     Serial.flush();
