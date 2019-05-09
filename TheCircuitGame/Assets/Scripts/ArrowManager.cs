@@ -10,13 +10,17 @@ public class ArrowManager : MonoBehaviour{
     public static float waitingTime;
     public static float speedOfArrows;
     void Start() {
-        countArrows=0;
-        //speedOfArrows=0.1f;
-        //waitingTime=2;
+        Reset(false);
         foreach(GameObject arrow in arrows)
             arrow.SetActive(false);
         StartCoroutine("StartNewArrow");
+        waitingTime = 2;
+        speedOfArrows = 0.1f;
+        //ConnectWithArduino.OnClick += PlaySound;
         ArrowMovement.OnClick += PlaySound;
+        GameOverManager.OnGameOver += StopNewArrow;
+        GameOverManager.OnGameOver += Reset;
+
     }
     void OnEnable() {
         PlayerPersistance.LoadData();
@@ -33,6 +37,8 @@ public class ArrowManager : MonoBehaviour{
             chosenArrow = ChooseArrow();
             if(!chosenArrow.activeInHierarchy){
                 chosenArrow.SetActive(true);
+		        //TextSingleton.Instance.accuracyText = "Miss";
+                //ConnectWithArduino.activeArrow = chosenArrow;
                 if(countArrows%3==2 && waitingTime>=0.05f)
                     waitingTime-=0.05f;
                 yield return new WaitForSeconds(waitingTime);
@@ -44,5 +50,18 @@ public class ArrowManager : MonoBehaviour{
 	}
     private void PlaySound(){
         GetComponent<AudioSource>().PlayOneShot(tone, 1f);
+    }
+    public void StopNewArrow(bool over){
+        if(over)
+            StopCoroutine("StartNewArrow");
+        else
+            StartCoroutine("StartNewArrow");
+    }
+    public void Reset(bool over){
+        if(!over){
+            countArrows=0;
+            PlayerPersistance.LoadData();
+            ScoreManager.Instance.ResetScore();
+        }
     }
 }

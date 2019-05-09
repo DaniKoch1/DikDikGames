@@ -24,6 +24,7 @@ public class PlayerPersistance : MonoBehaviour {
     }
     public static void ResetData(){
         PlayerPrefs.SetInt("score", 0);
+       // ScoreManager.Instance.ResetScore();
         PlayerPrefs.SetInt("highscore", ScoreManager.Instance.highscore);
         PlayerPrefs.SetFloat("speedOfArrows", 0.1f);
         PlayerPrefs.SetFloat("waitingTime", 2);

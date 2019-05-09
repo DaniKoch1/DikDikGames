@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TextSingleton : MonoBehaviour {
 
-	public GameObject accuracy;
-	public string accuracyText {get; set;}
+	//public GameObject accuracy;
+	public string accuracyText;
 	private static TextSingleton instance = null;
  	public static TextSingleton Instance {
  	    get { return instance; }
@@ -15,26 +15,32 @@ public class TextSingleton : MonoBehaviour {
  	        Destroy(this.gameObject);
  	        return;
  	    } else {
- 	        instance = this;
-		 }
+ 	       instance = this;
+		}
  	}
+	//  void OnEnable() {
+	// 	 accuracyText = "Miss";
+	//  }
 	 void Start() {
 		 accuracyText = "Miss";
-		 accuracy.gameObject.SetActive(false);
+		 gameObject.SetActive(false);
 		 AroundArrowsTriggers.OnNoClick += SetAccuracy;
 		 AroundArrowsTriggers.OnNoClick += ActivateText;
 		 
-		 ArrowMovement.OnClick += SetAccuracy;
-		 ArrowMovement.OnClick += ActivateText;
+		//  ConnectWithArduino.OnClick += SetAccuracy;
+		//  ConnectWithArduino.OnClick += ActivateText;
+		ArrowMovement.OnClick += SetAccuracy;
+		ArrowMovement.OnClick += ActivateText;
 	}
 	private void ActivateText(){
-		accuracy.gameObject.SetActive(true);
-		StartCoroutine(FadeOut.Fade(accuracy.gameObject, 0.0001f));
-		if(accuracyText.Equals("Miss"))
-			ButtonManager.GameOver();
+		gameObject.SetActive(true);
+		StartCoroutine(FadeOut.Fade(gameObject, 0.0001f));
+		if(accuracyText.Equals("Miss")) {
+			GameOverManager.GameOver();
+		}
 	}
 	private void SetAccuracy(){
-		if(!accuracy.activeInHierarchy)
-			accuracy.GetComponent<TextMesh>().text = accuracyText;
+		if(!gameObject.activeInHierarchy)
+			gameObject.GetComponent<TextMesh>().text = accuracyText;
 	}
 }
