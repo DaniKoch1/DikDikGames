@@ -15,9 +15,7 @@ public class VolumeManager : MonoBehaviour {
 		ButtonManager.OnPause += ActivatePauseMenu;
 	}
 	public void ChangeVolum(){
-		//Debug.Log(slider);
 		music.volume = slider.value;
-		//Debug.Log(slider.value);
 	}
 	public void ActivatePauseMenu(bool pause){
 		gameObject.SetActive(pause);
