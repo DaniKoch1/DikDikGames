@@ -5,7 +5,10 @@ The input is created on an arduino board and programmed in it's language, while 
 
 The premade game is:  
   -a dancing game (arrows on the ground)  
-  
+
+Link to presentation of the project on YouTube: http://www.youtube.com/watch?v=og5Nr1A_wns
+
+ 
 Big thanks for the assets from the Unity Asset Store:  
   -KY Magic Effects Free: https://assetstore.unity.com/packages/vfx/particles/spells/ky-magic-effects-free-21927  
   -simple icon pastel tone: https://assetstore.unity.com/packages/2d/gui/icons/simple-icon-pastel-tone-107568  
