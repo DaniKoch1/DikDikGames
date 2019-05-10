@@ -109,7 +109,11 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 342}
   m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 53
+=======
+  controlID: 27
+>>>>>>> parent of b3e4841... New text fixed and some other bugs :)
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +137,11 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 342}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 54
+=======
+  controlID: 28
+>>>>>>> parent of b3e4841... New text fixed and some other bugs :)
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +165,11 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 55
+=======
+  controlID: 29
+>>>>>>> parent of b3e4841... New text fixed and some other bugs :)
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -461,9 +473,15 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 7c300000
     m_LastClickedID: 12412
     m_ExpandedIDs: b0faffff000000004c30000070300000
+=======
+    m_SelectedIDs: 042e0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 7c46feff48a0feffd0a6feff9eb2feff6cb5feffd839ffff463bffff0255ffffa275ffffa681ffffec91ffffd09dffffb8a8ffffc4c2ffff6acaffffb0ccffffaad6ffffdefbffff00000000c62f00001c3000004c3000005c300000a43000004c4500002a460000de520000bc530000a6550000
+>>>>>>> parent of b3e4841... New text fixed and some other bugs :)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -628,20 +646,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Animations
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/Animations
+=======
+    - Assets/Scenes
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scenes
+>>>>>>> parent of b3e4841... New text fixed and some other bugs :)
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Dani\Desktop\TheCircuitGame\TheCircuitGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 942d0000
     m_LastClickedID: 11668
     m_ExpandedIDs: 00000000522c0000fe2c00003e2f0000d0300000d2300000d4300000d6300000d8300000da300000dc30000000ca9a3b
+=======
+    m_SelectedIDs: da2c0000
+    m_LastClickedID: 11482
+    m_ExpandedIDs: 00000000a22b0000582c0000a42e00007431000076310000783100007a3100007c3100007e3100008031000000ca9a3b
+>>>>>>> parent of b3e4841... New text fixed and some other bugs :)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -697,7 +729,11 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 1e2c0000
     m_LastClickedInstanceID: 11294
     m_HadKeyboardFocusLastEvent: 1
+<<<<<<< HEAD
     m_ExpandedInstanceIDs: c6230000ae940000642c0000a42d0000343a0000b22c00000000000000f1ffffc82d00001e2c0000
+=======
+    m_ExpandedInstanceIDs: c6230000ae940000642c0000a42d0000343a0000b22c00000000000000f1ffff
+>>>>>>> parent of b3e4841... New text fixed and some other bugs :)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

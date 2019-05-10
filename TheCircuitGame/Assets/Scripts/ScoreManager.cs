@@ -31,6 +31,7 @@ public class ScoreManager : MonoBehaviour {
 		 //GameOverManager.OnGameOver += ActivateNewHighScore;
 		 UpdateHighScore(true);
 		 newHighscore.SetActive(false);
+		 Debug.Log("Start "+firstHighscore);
 	 }
 
 	public void SetScore(){
@@ -38,6 +39,7 @@ public class ScoreManager : MonoBehaviour {
 		gameObject.GetComponent<TextMesh>().text = "Score: " + totalScore.ToString();
 		if(totalScore > highscore)
 		{
+			Debug.Log("New highscore happened "+firstHighscore+totalScore+">"+highscore);
 			if(firstHighscore){
 				ActivateNewHighScore(true);
 				StartCoroutine(FadeOut.Fade(newHighscore, 0.001f));
@@ -50,14 +52,13 @@ public class ScoreManager : MonoBehaviour {
 	public void ResetScore(){
 		totalScore = 0;
 		score = 0;
-		firstHighscore = true;
-		GameOverManager.OnGameOver -= ActivateNewHighScore;
-		GameOverManager.OnGameOver -= UpdateHighScore;
 		SetScore();
 	}
 	public void ActivateNewHighScore(bool over){
+		Debug.Log("New highscore is activated "+over);
 		newHighscore.SetActive(over);
 		firstHighscore = !over;	
+		Debug.Log("Now new highscore is "+firstHighscore);
 	}
 	public void UpdateHighScore(bool over){
 		 displayedHighscore.GetComponent<TextMesh>().text = "Highscore: " + highscore.ToString();
