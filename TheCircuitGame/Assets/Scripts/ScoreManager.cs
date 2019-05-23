@@ -52,6 +52,11 @@ public class ScoreManager : MonoBehaviour {
 	public void ResetScore(){
 		totalScore = 0;
 		score = 0;
+		if(!firstHighscore){
+			GameOverManager.OnGameOver -= ActivateNewHighScore;
+			GameOverManager.OnGameOver -= UpdateHighScore;
+		}
+		firstHighscore=true;
 		SetScore();
 	}
 	public void ActivateNewHighScore(bool over){
