@@ -6,7 +6,7 @@ The input is created on an arduino board and programmed in it's language, while 
 The premade game is:  
   -a dancing game (arrows on the ground)  
 
-Link to presentation of the project on YouTube: http://www.youtube.com/watch?v=og5Nr1A_wns
+Link to presentation of the project on YouTube: https://www.youtube.com/watch?v=bsz5HKY8FNA&feature=youtu.be
 
  
 Big thanks for the assets from the Unity Asset Store:  
